@@ -1,58 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
 
 body {
-    margin: auto;
     background: hsl(257, 40%, 49%);
     background-image: url('../images/bg-mobile.svg');
     background-repeat: no-repeat;
     background-size: contain;
     color: white;
-    font-family: 'Open Sans', sans-serif;
 }
 h1 {
     font-family: 'Poppins', sans-serif;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+button {
+    margin: 1rem auto;
+    padding: 0.9rem 4rem;
+    border: none;
+    border-radius: 2rem;
+    color: hsl(257, 40%, 49%);
+    background: white;
+    box-shadow: 5px 5px 20px -5px hsl(256, 41%, 21%);
+}
+button:hover {
+    background: hsl(300, 69%, 71%);
+    color: white;
+    transition: background 1s, color 1s;
+}
+footer {
+    text-align: center;
+    font-size: smaller;
+    white-space: pre;
 }
 .header__logo { 
     width: 10rem;
     margin: 2rem 2rem;
 }
 .main__container {
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
+    margin: 1rem 2rem;
     text-align: center;
 }
-.main__text {
-    padding: 5%;
-}
-.button {
-    margin: 2% auto;
-    padding: 10px 60px;
-    border: none;
-    border-radius: 2rem;
-    color: hsl(257, 40%, 49%);
-    background: white;
-    box-shadow: 5px 5px 20px hsl(256, 41%, 21%);
-}
-.button:hover {
-    background: hsl(300, 69%, 71%);
-    color: white;
-}
-footer {
-    text-align: center;
-    font-size: smaller;
+.main__container img {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 .footer__figure {
-    margin-bottom: 2rem;
-    height: 1rem;
+    height: 1.5rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
 .footer__figure img {
     height: 100%;
-    width: 1rem;
-    padding: 0.3rem;
+    width: 1.5rem;
+    padding: 0.4rem;
     object-fit: scale-down;
     border: 1px solid white;
     border-radius: 2rem;
@@ -68,14 +69,44 @@ a {
 
 @media (min-width:800px) {
     body {
+        height: 100%;
+        margin: 2rem 3rem 1rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         background-image: url('../images/bg-desktop.svg');
     }
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    footer p {
+        white-space: normal;
+        font-size: 1rem;
+    }
+    .header__logo {
+        width: 14rem;
+    }
     .main__container {
-        margin-left: 3.5rem;
-        flex-direction: row;
+        margin-top: 4rem;
+        display: flex;
         text-align: left;
+    }
+    .main__container img {
+        height: 39rem;
+    }
+    .main__text {
+        margin: 1rem 6rem;    
     }
     .footer__figure {
         justify-content: right;
+        align-items: end;
     }
 }
